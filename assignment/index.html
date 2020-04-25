@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <script src="main.js" charset="utf-8"></script>
+<!--    <script src="main.css" charset="utf-8"></script> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>My Chart.js Chart</title>
+</head>
 
+<style type="text/css" media="screen">
+
+#myChart1 {
+  position: absolute;
+  top: 10px;
+  left:10px;
+}
+
+#myChart2 {
+  position: absolute;
+  top: 10px;
+  left:620px;
+}
+
+#myChart3 {
+  position: absolute;
+  top: 310px;
+  left:620px;
+}
+
+#myChart4 {
+  position: absolute;
+  top: 620px;
+  left:10px;
+  bottom: 20px;
+}
+
+</style>
+
+
+<body>
+
+<div class="chart-container" style="position:absolute ; height:600px; width:600px">
+    <canvas id="myChart1" width="600" height="600" style="border:3px solid black;"></canvas>
+</div>
+
+<div class="chart-container" style="position:absolute ; height:300px; width:300px">
+    <canvas id="myChart2" width="300" height="300" style="border:3px solid red;"></canvas>
+</div>
+
+<div class="chart-container" style="position:absolute ; height:300px; width:300px">
+    <canvas id="myChart3" width="300" height="300" style="border:3px solid green;"></canvas>
+</div>
+
+<div class="chart-container" style="position:absolute ; height:300px; width:910px">
+    <canvas id="myChart4" width="910" height="300" style="border:3px solid purple;"></canvas>
+</div>
+
+</body>
+</html>
