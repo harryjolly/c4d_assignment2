@@ -14,36 +14,49 @@
 <style type="text/css" media="screen">
 
 #myChart1 {
+  /* absolute positioning so i can place using pixels */
   position: absolute;
+  /* canvas starting 10px from top to start layout */
   top: 10px;
+  /* canvas starting 10px from left to start layout  */
   left:10px;
 }
 
+
 #myChart2 {
+    /* absolute positioning so i can place using pixels */
   position: absolute;
+    /* canvas starting 10px from top to keep clean layout */
   top: 10px;
+  /* canvas starting 620px from left to place chart2 next to chart1  */
   left:620px;
 }
 
 #myChart3 {
+    /* absolute positioning so i can place using pixels */
   position: absolute;
+    /* canvas starting 310px from top to place under chart2 */
   top: 310px;
+        /* canvas starting 620px from left to place next to chart1 */
   left:620px;
 }
 
 #myChart4 {
+    /* absolute positioning so i can place using pixels */
   position: absolute;
+      /* canvas starting 620px from top to place under all charts */
   top: 620px;
+    /* canvas starting 10 px from left to keep inline with chart1 */
   left:10px;
-  bottom: 20px;
 }
 
 </style>
 
 
 <body>
-
+<!-- chart container needs to be here to resize the chart.js chart,  repeated below -->
 <div class="chart-container" style="position:absolute ; height:600px; width:600px">
+  <!-- create a canvas so we can draw and position the graphs, also alocate a size and style, repeated below -->
     <canvas id="myChart1" width="600" height="600" style="border:3px solid black;"></canvas>
 </div>
 
