@@ -1,6 +1,6 @@
 
 
-function callapi(){
+
 
 var covid;
 var covidOS;
@@ -229,6 +229,6 @@ let massPopChart4 = new Chart(myChart4, {
 }, 10000); //Charts wait 10 seconds while the API does a full loop to fill variables
 
 
-}//close function
+
 
 //-----------------------------------------------------------------------------------------------------------------------
