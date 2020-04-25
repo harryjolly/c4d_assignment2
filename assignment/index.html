@@ -50,6 +50,10 @@
   left:10px;
 }
 
+.padding{
+  padding-right: 50px;
+}
+
 </style>
 
 
@@ -57,7 +61,28 @@
 <!-- chart container needs to be here to resize the chart.js chart,  repeated below -->
 <div class="chart-container" style="position:absolute ; height:600px; width:600px;">
   <!-- create a canvas so we can draw and position the graphs, also alocate a size and style, repeated below -->
-    <canvas id="myChart1" width="600" height="600" style="border:3px solid black;"></canvas>
+    <canvas id="dataArt" width="600" height="500" style="border:3px solid black;"></canvas>
+
+    <div class="padding" id="information-container" width="600" height="100">
+      <div id="deaths" style="float:right; color:#fc2c03;">
+        <h3>Total deaths</h3>
+        <h4>20%</h4>
+      </div>
+
+      <div class="padding" id="Infected" style="float:right;color:#fcb103;">
+        <h3>Total Infected</h3>
+        <h4>30%</h4>
+      </div>
+
+      <div class="padding" id="Recovered" style="float:right;color:#51b307;">
+        <h3>Total Recovered</h3>
+        <h4>50%</h4>
+      </div>
+
+
+
+
+    </div> <!-- closes art info container -->
 </div>
 
 <div class="chart-container" style="position:absolute ; height:300px; width:300px;">
