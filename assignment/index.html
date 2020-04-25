@@ -8,7 +8,7 @@
   <script src="main.js" charset="utf-8"></script>
 <!--    <script src="main.css" charset="utf-8"></script> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <title>My Chart.js Chart</title>
+  <title>API Data Manipulation</title>
 </head>
 
 <style type="text/css" media="screen">
@@ -53,14 +53,14 @@
 </style>
 
 
-<body>
+<body onload="callapi()">
 <!-- chart container needs to be here to resize the chart.js chart,  repeated below -->
-<div class="chart-container" style="position:absolute ; height:600px; width:600px">
+<div class="chart-container" style="position:absolute ; height:600px; width:600px;">
   <!-- create a canvas so we can draw and position the graphs, also alocate a size and style, repeated below -->
     <canvas id="myChart1" width="600" height="600" style="border:3px solid black;"></canvas>
 </div>
 
-<div class="chart-container" style="position:absolute ; height:300px; width:300px">
+<div class="chart-container" style="position:absolute ; height:300px; width:300px;">
     <canvas id="myChart2" width="300" height="300" style="border:3px solid black;"></canvas>
 </div>
 
