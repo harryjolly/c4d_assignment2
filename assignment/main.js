@@ -15,9 +15,10 @@ setInterval(function() {
 
   //fetch API - API details go here
   fetch("https://api.covid19api.com/summary", requestOptions)
+  //https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest - Link to
 
     //put JSON response into variable
-    //final variable is to pinpoint the data in the array response - this one is United Kingdom
+    //final variable is to pinpoint the data in the array response - this one is Global stats
     .then(response => response.json()).then(x => covid = x.Global)
     .catch(err => {
       console.log(err);
@@ -27,11 +28,10 @@ setInterval(function() {
 
 
 
-  // referencing the canvas in the index.html
-  let myChart1 = document.getElementById('myChart1').getContext('2d');
-  let myChart2 = document.getElementById('myChart2').getContext('2d');
-  let myChart3 = document.getElementById('myChart3').getContext('2d');
-  let myChart4 = document.getElementById('myChart4').getContext('2d');
+      // referencing the canvas in the index.html
+      let myChart2 = document.getElementById('myChart2').getContext('2d');
+      let myChart3 = document.getElementById('myChart3').getContext('2d');
+      let myChart4 = document.getElementById('myChart4').getContext('2d');
 
 
 
@@ -41,7 +41,12 @@ setInterval(function() {
 
 
 
+
+
 setTimeout(function() {
+
+
+
 
 // Global Options
 Chart.defaults.global.defaultFontFamily = 'Arial'; // font type throughout the charts
@@ -221,7 +226,7 @@ let massPopChart4 = new Chart(myChart4, {
   }
 });
 
-}, 10000); //update charts every 10 seconds
+}, 10000); //Charts wait 10 seconds while the API does a full loop to fill variables
 
 
 }//close function
