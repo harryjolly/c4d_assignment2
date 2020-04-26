@@ -139,11 +139,11 @@ update();
 function update()
 {
 
-drawParticle2();
+drawParticle();
 window.requestAnimationFrame(update);
 }
 
-function drawParticle2()
+function drawParticle()
 {
 context.clearRect(0, 0, canvas.width, canvas.height);
 for(var i = 0; i < n; i++)
@@ -209,7 +209,7 @@ function init()
 {
 /* Resize Canvas */
 canvas = document.getElementById("myCanvas2");
-context = canvas.getContext('2d');
+context2 = canvas.getContext('2d');
 
 // Create particles
 particles = [];
@@ -234,7 +234,7 @@ window.requestAnimationFrame(update);
 
 function drawParticle()
 {
-
+context2.clearRect(0, 0, canvas.width, canvas.height);
 for(var i = 0; i < n; i++)
 {
   var circ = particles[i];
@@ -298,7 +298,7 @@ function init()
 {
 /* Resize Canvas */
 canvas = document.getElementById("myCanvas3");
-context = canvas.getContext('2d');
+context3 = canvas.getContext('2d');
 
 // Create particles
 particles = [];
@@ -323,7 +323,7 @@ window.requestAnimationFrame(update);
 
 function drawParticle()
 {
-
+context3.clearRect(0, 0, canvas.width, canvas.height);
 for(var i = 0; i < n; i++)
 {
   var circ = particles[i];
