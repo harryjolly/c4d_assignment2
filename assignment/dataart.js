@@ -80,6 +80,9 @@ function drawCircle(x, y, r) {
   context.arc(x, y, r, 0.0, Math.PI * 2.0);
   context.closePath();
   context.fill();
+	context.lineWidth = 2;
+	context.strokeStyle = '#000';
+  context.stroke();
 }
 
 var mouseMove = function (e) {
@@ -169,6 +172,9 @@ function drawCircle(x, y, r) {
   context.arc(x, y, r, 0.0, Math.PI * 2.0);
   context.closePath();
   context.fill();
+	context.lineWidth = 2;
+	context.strokeStyle = '#000';
+  context.stroke();
 }
 
 var mouseMove = function (e) {
@@ -258,6 +264,9 @@ function drawCircle(x, y, r) {
   context.arc(x, y, r, 0.0, Math.PI * 2.0);
   context.closePath();
   context.fill();
+	context.lineWidth = 2;
+	context.strokeStyle = '#000';
+  context.stroke();
 }
 
 var mouseMove = function (e) {
