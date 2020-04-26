@@ -24,14 +24,13 @@ setInterval(function() {
       console.log(err);
     });
 
-  console.log(covid.NewDeaths);
-
-
 
       // referencing the canvas in the index.html
       let myChart2 = document.getElementById('myChart2').getContext('2d');
       let myChart3 = document.getElementById('myChart3').getContext('2d');
       let myChart4 = document.getElementById('myChart4').getContext('2d');
+
+
 
 
 

@@ -1,12 +1,38 @@
 
+//boring maths stuff
+
+
+
+
 function dataart(){
 
+  var confirmed = covid.TotalConfirmed;
+  var deaths = covid.TotalDeaths;
+  var recovered = covid.TotalRecovered;
+  var totalCases = confirmed+deaths+recovered; //add all the data to gain total cases
+  console.log("the total cases are "+totalCases);
+
+//turn amount of deaths into a percentage of total
+  var deathsPec = ((deaths / totalCases) * 100);
+  deathsPec = deathsPec.toFixed(2);
+  document.getElementById("tdeaths").innerHTML = deathsPec+"%";
+  console.log(deathsPec);
+
+  var confiremedPec = ((confirmed / totalCases) * 100);
+  confiremedPec = confiremedPec.toFixed(2);
+  document.getElementById("tconf").innerHTML = confiremedPec+"%";
+
+  var recoveredPec = ((recovered / totalCases) * 100);
+  recoveredPec = recoveredPec.toFixed(2);
+  document.getElementById("trec").innerHTML = recoveredPec+"%";
+
+
+
+//console.log("the total cases are "+totalCases);
 var n, particles;
 var circleFill = "#ff0000"; //deaths
 var circRadius = 5;
 var mouseRadius = 5;
-
-console.log(covid.NewConfirmed);
 
 var tid = setInterval( function () {
   if ( document.readyState !== 'complete' ) return;
@@ -32,7 +58,7 @@ context = canvas.getContext('2d');
 
 // Create particles
 particles = [];
-n = 4;
+n = Math.floor(deathsPec); //floor number into whole number
 for(var i = 0; i < n; i++)
 {
   var sx = Math.random() * canvas.width;
@@ -100,7 +126,23 @@ var circleFill = "#48a832"; // Recovered
 var circRadius = 20;
 var mouseRadius = 5;
 
-console.log(covid.NewConfirmed);
+
+
+var confirmed = covid.TotalConfirmed;
+var deaths = covid.TotalDeaths;
+var recovered = covid.TotalRecovered;
+var totalCases = confirmed+deaths+recovered; //add all the data to gain total cases
+
+
+//turn amount of deaths into a percentage of total
+var deathsPec = ((deaths / totalCases) * 100);
+
+var confiremedPec = ((confirmed / totalCases) * 100);
+
+var recoveredPec = ((recovered / totalCases) * 100);
+
+
+
 
 var tid = setInterval( function () {
   if ( document.readyState !== 'complete' ) return;
@@ -126,7 +168,7 @@ context2 = canvas.getContext('2d');
 
 // Create particles
 particles = [];
-n = 10;
+n = Math.floor(recoveredPec); //floor number into whole number
 for(var i = 0; i < n; i++)
 {
   var sx = Math.random() * canvas.width;
@@ -192,7 +234,19 @@ var circleFill = "#ffd000"; //Infected
 var circRadius = 10;
 var mouseRadius = 5;
 
-console.log(covid.NewConfirmed);
+
+var confirmed = covid.TotalConfirmed;
+var deaths = covid.TotalDeaths;
+var recovered = covid.TotalRecovered;
+var totalCases = confirmed+deaths+recovered; //add all the data to gain total cases
+
+
+//turn amount of deaths into a percentage of total
+var deathsPec = ((deaths / totalCases) * 100);
+
+var confiremedPec = ((confirmed / totalCases) * 100);
+
+var recoveredPec = ((recovered / totalCases) * 100);
 
 var tid = setInterval( function () {
   if ( document.readyState !== 'complete' ) return;
@@ -218,7 +272,7 @@ context3 = canvas.getContext('2d');
 
 // Create particles
 particles = [];
-n = 6;
+n = Math.floor(confiremedPec); //floor number into whole number
 for(var i = 0; i < n; i++)
 {
   var sx = Math.random() * canvas.width;
@@ -278,9 +332,10 @@ var mouseMove = function (e) {
 
 function loadart(){
 setTimeout(function() {
+
 	dataart();
 	dataart2();
 	dataart3();
 
-}, 4000); //Charts wait 4 seconds while the API does a full loop to fill variables
+}, 7000); //Charts wait 4 seconds while the API does a full loop to fill variables
 }
