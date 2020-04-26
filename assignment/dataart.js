@@ -1,5 +1,6 @@
 
 function dataart(){
+
 var n, particles;
 var circleFill = "#ff0000";
 var circRadius = 5;
@@ -46,8 +47,10 @@ update();
 
 function update()
 {
+
 drawParticle();
 window.requestAnimationFrame(update);
+
 }
 
 function drawParticle()
@@ -129,17 +132,18 @@ for(var i = 0; i < n; i++)
 }
 
 // Render Update
-canvas.addEventListener("mousemove", mouseMove);
+canvas.addEventListener("mousemove", mouseMove2);
 update();
 }
 
 function update()
 {
-drawParticle();
+
+drawParticle2();
 window.requestAnimationFrame(update);
 }
 
-function drawParticle()
+function drawParticle2()
 {
 context.clearRect(0, 0, canvas.width, canvas.height);
 for(var i = 0; i < n; i++)
@@ -230,7 +234,7 @@ window.requestAnimationFrame(update);
 
 function drawParticle()
 {
-context.clearRect(0, 0, canvas.width, canvas.height);
+
 for(var i = 0; i < n; i++)
 {
   var circ = particles[i];
@@ -319,7 +323,7 @@ window.requestAnimationFrame(update);
 
 function drawParticle()
 {
-context.clearRect(0, 0, canvas.width, canvas.height);
+
 for(var i = 0; i < n; i++)
 {
   var circ = particles[i];
@@ -358,5 +362,6 @@ setTimeout(function() {
 	dataart();
 	dataart2();
 	dataart3();
-}, 6000); //Charts wait 6 seconds while the API does a full loop to fill variables
+
+}, 4000); //Charts wait 4 seconds while the API does a full loop to fill variables
 }
